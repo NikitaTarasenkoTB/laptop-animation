@@ -1,5 +1,5 @@
 <template>
-  <div @mousewheel="whellHandler" class="container">
+  <div class="container">
     <h1>Scroll to see animation</h1>
     <div class="btns">
       <!-- <button @click="playAnimation">play</button> -->
@@ -63,14 +63,6 @@ gsap.registerPlugin(ScrollTrigger);
         this.tlForward.seek(0);
         this.tlForward.play();
       },
-      // whellHandler(event) {
-      //   event.preventDefault();
-      //   this.tlForward.play();
-      //   setTimeout(() => {
-      //     this.tlForward.pause();
-      //   }, 0.05)
-      //   console.log(event);
-      // }
     }
   }
 </script>
@@ -92,15 +84,9 @@ gsap.registerPlugin(ScrollTrigger);
     width: 99%;
     min-height: 100vh;
 
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-
     background: coral;
   }
   .laptop-container {
-    // width: 80%;
-    // height: 80%; 
     width: 80vw;
     height: 80vh;
     position: relative;
@@ -111,7 +97,7 @@ gsap.registerPlugin(ScrollTrigger);
     bottom: 0;
     left: 0;
     //padding-left: 100px;
-
+    
     width: 60%;
     // height: 100%;
   }
