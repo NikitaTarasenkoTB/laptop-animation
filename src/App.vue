@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Laptop />
+    <div class="laptopContainer" :key="speed">
+      <Laptop @setSpeed="setSpeed" :speed="speed"/>
+    </div>
   </div>
 </template>
 
@@ -11,6 +13,17 @@ export default {
   name: "App",
   components: {
     Laptop
+  },
+  data() {
+    return {
+      speed: 0.1
+    }
+  },
+  methods: {
+    setSpeed(value) {
+      this.speed += value;
+      console.log(this.speed, 'speed');
+    }
   }
 };
 </script>
